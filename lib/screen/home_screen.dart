@@ -26,7 +26,9 @@ class HomeScreen extends StatelessWidget {
         ),
         leading: IconButton(
           // 왼쪽 아이콘 배치
-          onPressed: () {},
+          onPressed: () {
+            controller.goBack();
+          },
           icon: Icon(Icons.arrow_back),
         ),
         actions: [
