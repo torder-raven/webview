@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+
+var controller = WebViewController()
+  ..setJavaScriptMode(JavaScriptMode.unrestricted)
+  ..setBackgroundColor(Colors.yellow)
+  ..loadRequest((Uri.parse(
+      'https://litt.ly/duenyang?fbclid=PAAaYIsljf7s38jdGmA9RYRvRSXc0lDo09pjKJuNHajEXEmukq5kJG2BUKDPo')));
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -15,6 +22,9 @@ class HomeScreen extends StatelessWidget {
             fontSize: 20,
           ),
         ),
+      ),
+      body: WebViewWidget(
+        controller: controller,
       ),
     );
   }
