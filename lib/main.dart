@@ -1,22 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:webview/screen/home_screen.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: HomeScreen(),
   ));
 }
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text('Hello!'),
-      ),
-    );
-  }
-}
+// https://litt.ly/duenyang?fbclid=PAAaYIsljf7s38jdGmA9RYRvRSXc0lDo09pjKJuNHajEXEmukq5kJG2BUKDPo
