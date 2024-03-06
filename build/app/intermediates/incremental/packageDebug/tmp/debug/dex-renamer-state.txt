@@ -1,0 +1,4 @@
+#Tue Mar 05 10:20:33 KST 2024
+base.0=/Users/torder/AndroidStudioProjects/webview_raven/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
