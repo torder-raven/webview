@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_view/resources/strings.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 final homeUrl = Uri.parse("https://blog.codefactory.ai");
@@ -17,7 +18,9 @@ class HomeScreen extends StatelessWidget {
         onHttpAuthRequest: (HttpAuthRequest request) {
           print("onHttpAuthRequest : $request");
         },
-        // onNavigationRequest: (NavigationRequest request) {},
+        // onNavigationRequest: (NavigationRequest request) async {
+        //
+        // },
         onPageFinished: (String url) {
           print("onPageFinished : $url");
         },
@@ -44,14 +47,14 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange,
-        title: Text("Code Factory"),
+        title: const Text(Strings.APP_TITLE),
         centerTitle: true,
         actions: [
           IconButton(
             onPressed: () {
               controller.loadRequest(homeUrl);
             },
-            icon: Icon(Icons.home),
+            icon: const Icon(Icons.home),
           ),
         ],
       ),
